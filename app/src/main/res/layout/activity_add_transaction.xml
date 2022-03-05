@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#323232"
+    tools:context=".AddTransactionActivity">
+
+    <EditText
+        android:id="@+id/placeEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:background="@drawable/rounded_edit_text"
+        android:ems="10"
+        android:hint="Place"
+        android:inputType="textPersonName"
+        android:paddingStart="16dp"
+        android:paddingLeft="16dp"
+        android:paddingEnd="16dp"
+        android:paddingRight="16dp"
+        android:textColor="#DCDCDC"
+        android:textColorHint="#8C8C8C"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.18" />
+
+    <EditText
+        android:id="@+id/dateEditText"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/rounded_edit_text"
+        android:editable="false"
+        android:ems="10"
+        android:enabled="false"
+        android:inputType="textPersonName"
+        android:minWidth="50dp"
+        android:paddingStart="16dp"
+        android:paddingLeft="16dp"
+        android:paddingEnd="16dp"
+        android:paddingRight="16dp"
+        android:textAlignment="center"
+        android:textColor="#DCDCDC"
+        android:textColorHint="#8C8C8C"
+        app:layout_constraintEnd_toStartOf="@+id/pickTextViewButton"
+        app:layout_constraintStart_toStartOf="@+id/placeEditText"
+        app:layout_constraintTop_toBottomOf="@+id/placeEditText" />
+
+    <EditText
+        android:id="@+id/categoryEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/rounded_edit_text"
+        android:ems="10"
+        android:hint="Category"
+        android:inputType="textPersonName"
+        android:paddingStart="16dp"
+        android:paddingLeft="16dp"
+        android:paddingEnd="16dp"
+        android:paddingRight="16dp"
+        android:textColor="#DCDCDC"
+        android:textColorHint="#8C8C8C"
+        app:layout_constraintEnd_toEndOf="@+id/dateEditText"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/dateEditText"
+        app:layout_constraintTop_toBottomOf="@+id/dateEditText" />
+
+    <EditText
+        android:id="@+id/amountEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/rounded_edit_text"
+        android:ems="10"
+        android:hint="Amount"
+        android:inputType="number"
+        android:paddingStart="16dp"
+        android:paddingLeft="16dp"
+        android:paddingEnd="16dp"
+        android:paddingRight="16dp"
+        android:textColor="#DCDCDC"
+        android:textColorHint="#8C8C8C"
+        app:layout_constraintEnd_toEndOf="@+id/categoryEditText"
+        app:layout_constraintStart_toStartOf="@+id/categoryEditText"
+        app:layout_constraintTop_toBottomOf="@+id/categoryEditText" />
+
+    <ImageView
+        android:id="@+id/placeImageView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/placeEditText"
+        app:layout_constraintEnd_toStartOf="@+id/placeEditText"
+        app:layout_constraintTop_toTopOf="@+id/placeEditText"
+        app:srcCompat="@drawable/ic_baseline_place_24" />
+
+    <ImageView
+        android:id="@+id/dateImageView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/dateEditText"
+        app:layout_constraintEnd_toStartOf="@+id/dateEditText"
+        app:layout_constraintTop_toTopOf="@+id/dateEditText"
+        app:srcCompat="@drawable/ic_baseline_today_24" />
+
+    <ImageView
+        android:id="@+id/categoryImageView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/categoryEditText"
+        app:layout_constraintEnd_toStartOf="@+id/categoryEditText"
+        app:layout_constraintTop_toTopOf="@+id/categoryEditText"
+        app:srcCompat="@drawable/ic_baseline_category_24" />
+
+    <ImageView
+        android:id="@+id/amountImageView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/amountEditText"
+        app:layout_constraintEnd_toStartOf="@+id/amountEditText"
+        app:layout_constraintTop_toTopOf="@+id/amountEditText"
+        app:srcCompat="@drawable/ic_baseline_attach_money_24" />
+
+    <TextView
+        android:id="@+id/pickTextViewButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pick a date"
+        android:textColor="#2196F3"
+        app:layout_constraintBottom_toBottomOf="@+id/dateEditText"
+        app:layout_constraintEnd_toEndOf="@+id/placeEditText"
+        app:layout_constraintTop_toTopOf="@+id/dateEditText" />
+
+    <ImageButton
+        android:id="@+id/plusImageButton"
+        style="@style/Widget.AppCompat.ImageButton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/circle"
+        android:backgroundTint="#4a4a4a"
+        app:layout_constraintBottom_toBottomOf="@+id/minusImageButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/minusImageButton"
+        app:srcCompat="@drawable/ic_baseline_arrow_downward_24" />
+
+    <ImageButton
+        android:id="@+id/minusImageButton"
+        style="@style/Widget.AppCompat.ImageButton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/circle"
+        android:backgroundTint="#4a4a4a"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/amountEditText"
+        app:layout_constraintVertical_bias="0.17000002"
+        app:srcCompat="@drawable/ic_baseline_arrow_upward_24" />
+
+    <ImageButton
+        android:id="@+id/shareButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="-10dp"
+        android:layout_weight="1"
+        android:backgroundTint="#000000"
+        android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/saveButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_baseline_share_24" />
+
+    <ImageButton
+        android:id="@+id/saveButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:layout_weight="1"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/shareButton"
+        app:srcCompat="@drawable/ic_baseline_save_24" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
